@@ -1,0 +1,100 @@
+.reviews{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.reviewsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.reviewItem {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.reviewItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.reviewItem::before {
+  content: '"';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 4rem;
+  color: rgba(0, 123, 255, 0.1);
+  font-family: serif;
+  line-height: 1;
+}
+
+.reviewAuthor {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.authorIcon {
+  color: #007bff;
+  font-size: 1.4rem;
+}
+
+.reviewContent {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.reviewDate {
+  color: #999;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dateIcon {
+  color: #999;
+}
+
+.noReviews {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 1.2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .reviewItem {
+    padding: 20px;
+  }
+
+  .reviewAuthor {
+    font-size: 1.1rem;
+  }
+
+  .reviewContent {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
